@@ -1,5 +1,25 @@
 <div class="container mt-4">
     <h3>Data Pemesanan</h3>
+    <form action="<?= base_url('pemesanan/filter') ?>" method="get" class="row g-2 mb-3">
+        <div class="col-md-3">
+            <input type="date" name="tanggal_mulai" class="form-control" required>
+        </div>
+        <div class="col-md-3">
+            <input type="date" name="tanggal_akhir" class="form-control" required>
+        </div>
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-primary">Filter</button>
+            <a href="<?= base_url('pemesanan') ?>" class="btn btn-secondary">Reset</a>
+        </div>
+    </form>
+
+    <?php if (isset($_GET['tanggal_mulai'])): ?>
+        <div class="alert alert-info">
+            Menampilkan pemesanan dari <strong><?= esc($_GET['tanggal_mulai']) ?></strong>
+            sampai <strong><?= esc($_GET['tanggal_akhir']) ?></strong>
+        </div>
+    <?php endif ?>
+
     <a href="<?= base_url('pemesanan/export_excel') ?>" class="btn btn-success mb-2">Export Excel</a>
     <a href="<?= base_url('pemesanan/export_pdf') ?>" class="btn btn-danger mb-2">Export PDF</a>
 

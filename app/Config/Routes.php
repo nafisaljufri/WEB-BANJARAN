@@ -99,3 +99,5 @@ $routes->get('auth/googleCallback', 'Auth::googleCallback');
 
 $routes->match(['get', 'post'], 'laporan/filter', 'Laporan::filter');
 $routes->match(['get', 'post'], 'laporan/pdf', 'Laporan::pdf');
+
+$routes->get('pemesanan/filter', 'Pemesanan::filter');

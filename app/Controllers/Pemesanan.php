@@ -16,12 +16,9 @@ class Pemesanan extends BaseController
 
     public function index()
     {
-        $data = [
-            'judul' => 'Kelola Pemesanan Wisata',
-            'page'  => 'v_pemesanan',
-            'pemesanan' => $this->pemesananModel->getAllWithWisata()
-        ];
-        return view('v_template_backend', $data);
+        $model = new PemesananModel();
+        $data['pemesanan'] = $model->getAll(); // pakai fungsi yang JOIN ke tabel paketwisata
+        return view('v_pemesanan', $data);
     }
 
     public function form($id_wisata = null)
@@ -76,6 +73,25 @@ class Pemesanan extends BaseController
 
         // Output PDF ke browser
         $dompdf->stream('data-pemesanan.pdf', ['Attachment' => false]);
+    }
+
+    public function filter()
+    {
+        $mulai = $this->request->getGet('tanggal_mulai');
+        $akhir = $this->request->getGet('tanggal_akhir');
+
+        $model = new PemesananModel();
+
+        $data = [
+            'judul' => 'Data Pemesanan',
+            'pemesanan' => $model->getByTanggal($mulai, $akhir)
+        ];
+
+        return view('v_template_backend', [
+            'page' => 'v_pemesanan',
+            'judul' => 'Riwayat Pemesanan',
+            'pemesanan' => $data['pemesanan']
+        ]);
     }
 
 }

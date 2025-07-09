@@ -26,4 +26,14 @@ class PemesananModel extends Model
             ->get()->getResultArray();
     }
 
+        public function getByTanggal($mulai, $akhir)
+    {
+        return $this->select('pesan.*, paketwisata.nama_wisata')
+                    ->join('paketwisata', 'paketwisata.id_wisata = pesan.id_wisata', 'left')
+                    ->where('tanggal_pesan >=', $mulai)
+                    ->where('tanggal_pesan <=', $akhir)
+                    ->orderBy('tanggal_pesan', 'DESC')
+                    ->findAll();
+    }
+
 }
