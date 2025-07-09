@@ -25,7 +25,7 @@
 }
 
 .get-started-btn {
-  background-color: #4cd964;
+  background-color: color:rgb(50,150,200);;
   color: white;
   padding: 6px 18px;
   border-radius: 50px;
@@ -44,7 +44,7 @@
 
 
 .get-started-btn:hover {
-  background: #3ac162;
+  background: color:rgb(50,150,200);;
   color: #fff;
 }
 
@@ -110,7 +110,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="<?= base_url('frontend') ?>/assets/img/favicon.png" rel="icon">
+  <link href="<?= base_url('frontend') ?>/assets/img/logodesa.jpg" rel="icon">
   <link href="<?= base_url('frontend') ?>/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -139,12 +139,12 @@
 <body>
 
 <header id="header" class="fixed-top">
-  <div class="container d-flex align-items-center justify-content-between">
+  <div style="color:rgb(50,150,200);" class="container d-flex align-items-center justify-content-between">
 
     <!-- Logo & Judul -->
     <div class="d-flex align-items-center">
       <img src="<?= base_url('logo/logodesa.jpg') ?>" alt="Logo" width="90" class="me-2">
-      <h1 class="logo mb-0"><a href="<?= base_url('home') ?>" style="font-size: 20px;">DESA WISATA BANJARAN</a></h1>
+      <h1 class="logo mb-0"><a href="<?= base_url('home') ?>" style="font-size: 20px; color:rgb(50,150,200);">DESA WISATA BANJARAN</a></h1>
     </div>
 
     <!-- Navbar -->
@@ -154,16 +154,8 @@
         <li><a href="#popular-courses">Sejarah</a></li>
         <li><a href="<?= base_url('paket') ?>">Paket Wisata</a></li>
         <li><a href="#galeri">Galeri</a></li>
-        <li class="dropdown"><a href="#"><span>Berita</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="#">Drop Down 1</a></li>
-            <li><a href="#">Drop Down 2</a></li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
-          </ul>
-        </li>
+        <li><a href="#berita">Berita</a></li>
       </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>
 
     <!-- Kanan: Pencarian, Cart, Login -->
@@ -205,44 +197,18 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Mentor</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
+            <h3>TUGAS AKHIR PWL</h3>
+              Prodi - Teknik Informatika <br>
+              Fakultas - Ilmu Komputer<br>
+              Universitas Dian Nuswantoro <br><br>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            <p>  
+              <strong>Nama:</strong> Muchamad Nafis Aljufri<br>
+              <strong>NIM:</strong> A11.2023.15328<br>
+              <strong>Email:</strong> 111202315328@mhs.dinus.ac.id<br>
+            </p>
           </div>
 
         </div>
@@ -261,6 +227,7 @@
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          <p>Authorized by <a href="https://www.instagram.com/nafisaljufrii/">Muchamad Nafis Aljufri - A11.2023.15328</a></p>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
